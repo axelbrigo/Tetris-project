@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 300px;
+    margin-top: 15px;
+}
+
+body {
+    background-color: #C6CFA2;
+}
+.container_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boards__container--big {
+    width: 300px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(20, 30px);
+    border: 2px solid #303A21;
+    margin-bottom: 15px;
+}
+.boards__container--rigth {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #303A21;  
+}
+.block {
+    border: 5px solid #303A21;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    opacity: 0.2;
+}
+.smallBlock {
+    width: 10px;
+    height: 10px;
+    background-color: #303A21;
+}
+.boards__container--small {
+    height: 120px;
+    width: 120px;
+    display: grid;
+    grid-template-columns: repeat(4, 30px);
+    grid-template-rows: repeat(4, 30px);
+    border: 2px solid #303A21;
+    margin: 15px 0;
+}
+.counter {
+    border: 2px solid #303A21;
+    width: 120px;
+    height: 40px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.points {
+    margin-top: 10px;
+}
+.controls-rotate {
+    margin-bottom: 10px;
+}
+
+.container__boards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.printBlock {
+    opacity: 1;
+    /* border: 10px solid green;
+    background-color: green; 
+    box-shadow: 5px 5px 15px 5px #000000; */
+}
+
+.img_game-over {
+    width: 250px;
+    margin-left: 25px;
+    margin-top: 206.25px;
+    /* opacity: 0.1; */
+}
+.fondoNegro {
+    background-color: black;
+    opacity: 0.8;
+}
+.button{
+    cursor: pointer;
+    border-color: #303A21;
+    background-color: #C6CFA2;
+    justify-content: center;
+    display: flex;
+    height: 40px;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100px;
+    position: relative;
+    top: 500%;
+    left: 325%;
+    font-size: 1.5rem;
+}
+.maxScoreContainer {
+    position: relative;
+    top: 400px;
+    left: -32px;
+    width: 300px;
+}
+.maxScore {
+    text-align: center;
+}
+
+.instruction {
+    color: white;
+    width: 300px;
+    position: relative;
+    top: 580px;
+    left: -55px;
+   text-align: center;
+}
+
+.container_boton {
+    display: none;
+}
+
+.button_responsive{
+    cursor: pointer;
+    border-color: #303A21;
+    background-color: #C6CFA2;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+}
+.puntuacion{
+    color: white;
+    width: 300px;
+    position: relative;
+    top: 350px;
+    left: -25px;
+    font-size: 1.2rem;
+   text-align: center;
+}
+
+@media (max-width: 400px){
+    .container_boton{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    .boards__container--big {
+        width: 200px;
+        height: 400px;
+        grid-template-columns: repeat(10, 20px);
+        grid-template-rows: repeat(20, 20px);
+        margin-right: 5px;
+    }
+    .maxScoreContainer {
+        top: 300px;
+        left: -20px;
+        width: 200px;
+    }
+    .maxScore {
+        font-size: 1rem;
+    }
+    .button{
+        top: 615%;
+        left: 250%;
+        font-size: 1.5rem;
+    }
+    .boards__container--rigth {
+        width: 90px;
+    }
+    .img_game-over {
+        width: 200px;
+        margin-left: 1px;
+        margin-top: 132px;
+    }
+    .counter {
+        width: 60px;
+        font-size: 1.6rem;
+    }
+    .boards__container--small {
+        height: 80px;
+        width: 80px;
+        grid-template-columns: repeat(4, 20px);
+        grid-template-rows: repeat(4, 20px);
+        margin: 10px 0;
+    }
+    .controls-rotate {
+        font-size: 0.8rem;
+    }
+    .controls-move {
+        font-size: 0.8rem;
+    }
+    .container__boards {
+        gap: 1px;
+    }
+    .puntuacion{
+        color: white;
+        width: 200px;
+        position: relative;
+        top: 60px;
+        left: -20px;
+        font-size: 0.8rem;
+       text-align: center;
+    }
+    .instruction {
+        width: 200px;
+        font-size: 0.6rem;
+        top: 380px;
+        left: -40px;
+    }
+}
